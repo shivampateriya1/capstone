@@ -50,7 +50,7 @@ pipeline{
                             docker.withRegistry('', dockerhub_creds){
                                 dockerImage.push()
                                 dockerImage.push('latest')
-                                dockerImage.push('v1')
+                                // dockerImage.push('v1')
                             }
                         }
                     }
