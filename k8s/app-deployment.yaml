@@ -14,9 +14,9 @@ spec:
     spec:
       containers:
         - name: fleetms-v2
-          image: shashwatknol/finalcapestone:v1
+          image: shivampateriyaknoldus/test1
           ports:
-            - containerPort: 8080
+            - containerPort: 8081
           env:   # Setting Environmental Variables
             - name: DB_HOST   # Setting Database host address
               value: mysql

@@ -7,14 +7,14 @@ metadata:
     app: mysql
     tier: database
 spec:
-  selector: # mySQL Pod Should contain same labels
+  selector:
     matchLabels:
       app: mysql
   strategy:
     type: Recreate
   template:
     metadata:
-      labels: # Must match 'Service' and 'Deployment' selectors
+      labels: 
         app: mysql
         tier: database
     spec:

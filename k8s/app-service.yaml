@@ -6,15 +6,15 @@ metadata:
 spec:
   ports:
     - protocol: "TCP"
-      port: 8080    # Port inside the cluster
-      targetPort: 8080   # Port exposed to the outside
+      port: 8081   
+      targetPort: 8081   
   selector:
     app: fleetms-v2
   type: NodePort
 
 ---
 
-# Define a 'Service' To Expose MySQL to Other Services
+
 apiVersion: v1
 kind: Service
 metadata:
@@ -29,4 +29,4 @@ spec:
   selector:
     app: mysql
     tier: database
-  clusterIP: None # DNS is used, so clusterIP is not needed
+  clusterIP: None 
