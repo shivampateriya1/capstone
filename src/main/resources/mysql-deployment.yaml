@@ -8,8 +8,8 @@ metadata:
     tier: database
 spec:
   ports:
-    - port: 3307
-      targetPort: 3307
+    - port: 3306
+      targetPort: 3306
   selector:
     app: mysql
     tier: database
@@ -62,7 +62,7 @@ spec:
             - name: MYSQL_DATABASE
               value: fleetdb
           ports:
-            - containerPort: 3307
+            - containerPort: 3306
               name: mysql
           volumeMounts:
             - mountPath: /var/lib/mysql
@@ -143,4 +143,4 @@ spec:
         - name: mysql-persistance-storage
           persistentVolumeClaim:
             claimName: mysql-pv-claim
-im
+
