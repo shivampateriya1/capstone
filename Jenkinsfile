@@ -55,6 +55,21 @@ pipeline{
                         }
                     }
                 }
+             stage("deploy")
+            {
+               steps{
+                      withKubeConfig([credentialsId: 'kube']){ 
+                       sh 'pwd && ls'   
+                       sh 'kubectl get po'   
+                    // sh 'pwd && ls'
+                    //    sh 'kubectl apply -f app-deployment.yml
+                          sh 'kubectl apply -f mysql-deployment.yml'
+                          sh 'sleep 360'
+                          sh 'kubectl apply -f app-deployment.yml'
+                    }
+
+            }
+            }    
                     
         }
 }      
