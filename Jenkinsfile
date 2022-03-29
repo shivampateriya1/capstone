@@ -37,7 +37,7 @@ pipeline{
                        sh 'pwd && ls'   
                        sh 'kubectl get po'   
                     // sh 'pwd && ls'
-                    // sh 'kubectl apply -f kubernetes/mongodb/mongodb.yml'
+                       sh 'kubectl apply -f app-deployment.yml'
                     // sh 'kubectl apply -f kubernetes/app/deployment.yml'
                     // sh 'kubectl apply -f kubernetes/app/nodeport.yml'
                     }
