@@ -34,6 +34,7 @@ pipeline{
             {
                steps{
                       withKubeConfig([credentialsId: 'kube']){
+                       sh  pwd    
                        sh 'kubectl get po'   
                     // sh 'pwd && ls'
                     // sh 'kubectl apply -f kubernetes/mongodb/mongodb.yml'
