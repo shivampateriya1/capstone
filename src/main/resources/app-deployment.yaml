@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: fleetms-v2
-          image: shivampateriyaknoldus/spring:v1
+          image: shivampateriyaknoldus/spring
           ports:
             - containerPort: 8081
           env:   # Setting Environmental Variables
