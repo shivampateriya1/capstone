@@ -1,7 +1,7 @@
 pipeline{
     agent any
      environment{
-        dockerhub_repo = "shivampateriyaknoldus/spring"
+        dockerhub_repo = "shivampateriyaknoldus/test"
         dockerhub_creds = 'dockershivam'
         dockerImage = ''
      }
