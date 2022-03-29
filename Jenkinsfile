@@ -33,8 +33,8 @@ pipeline{
             stage("deploy")
             {
                steps{
-                      withKubeConfig([credentialsId: 'kube']){
-                       sh  pwd    
+                      withKubeConfig([credentialsId: 'kube']){ 
+                       sh 'pwd && ls'   
                        sh 'kubectl get po'   
                     // sh 'pwd && ls'
                     // sh 'kubectl apply -f kubernetes/mongodb/mongodb.yml'
