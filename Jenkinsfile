@@ -30,19 +30,16 @@ pipeline{
                     sh "mvn test"
                 }
             } 
-            stage("deploy")
-            {
-               steps{
-                      withKubeConfig([credentialsId: 'kube']){
-                       sh 'kubectl get po'   
-                    // sh 'pwd && ls'
-                    // sh 'kubectl apply -f kubernetes/mongodb/mongodb.yml'
-                    // sh 'kubectl apply -f kubernetes/app/deployment.yml'
-                    // sh 'kubectl apply -f kubernetes/app/nodeport.yml'
-                    }
+            // stage("deploy")
+            // {
+            //    steps{
+            //           withKubeConfig([credentialsId: 'kube']){
+            //            sh 'kubectl get po'   
+                
+            //         }
 
-            }
-            }
+            // }
+            // }
             //  stage("package")
             // {
             //     steps{
